@@ -1,0 +1,127 @@
+{
+    "sensors": {
+        "class": "DataContainer",
+        "icon": "icon-sine-wave"
+    },
+    "sensors.poti": {
+        "class": "AnalogSensor",
+        "values": {
+            "pin": 3
+        }
+    },
+    "sensors.bright": {
+        "class": "AnalogSensor",
+        "values": {
+            "pin": 4,
+            "inverted": true
+        }
+    },
+    "sensors.mic": {
+        "class": "AnalogSensor",
+        "values": {
+            "pin": 1
+        }
+    },
+    "sensors.poti_speed_remapper": {
+        "class": "Remapper",
+        "values": {
+            "from_min": 0.0,
+            "from_max": 1.0,
+            "to_min": 1.0,
+            "to_max": 50.0
+        }
+    },
+    "sensors.poti_speed": {
+        "class": "Pipeline",
+        "values": {
+            "source": "$sensors.poti"
+        },
+        "calls": [
+            {
+                "add": {
+                    "processor": "$sensors.poti_speed_remapper"
+                }
+            }
+        ]
+    },
+    "sensors.poti_inverter": {
+        "class": "Inverter",
+        "values": {
+            "pivot": 1.0,
+            "scale": 1.0
+        }
+    },
+    "sensors.poti_inverted": {
+        "class": "Pipeline",
+        "values": {
+            "source": "$sensors.poti"
+        },
+        "calls": [
+            {
+                "add": {
+                    "processor": "$sensors.poti_inverter"
+                }
+            }
+        ]
+    },
+    "sensors.mic_sound_remapper": {
+        "class": "Remapper",
+        "values": {
+            "from_min": 0.2,
+            "from_max": 0.9,
+            "to_min": 0.0,
+            "to_max": 1.0
+        }
+    },
+    "sensors.mic_sound_limiter": {
+        "class": "Limiter",
+        "values": {
+            "min_val": 0.0,
+            "max_val": 1.0
+        }
+    },
+    "sensors.mic_sound_gain_remapper": {
+        "class": "Remapper",
+        "values": {
+            "from_min": 0.0,
+            "from_max": 1.0,
+            "to_min": "lambda: $sensors.poti_inverted.value()",
+            "to_max": 1.0
+        }
+    },
+    "sensors.mic_sound_final_limiter": {
+        "class": "Limiter",
+        "values": {
+            "min_val": 0.0,
+            "max_val": 1.0
+        }
+    },
+    "sensors.mic_sound": {
+        "class": "Pipeline",
+        "values": {
+            "source": "$sensors.mic"
+        },
+        "calls": [
+            {
+                "add": {
+                    "processor": "$sensors.mic_sound_remapper"
+                }
+            },
+            {
+                "add": {
+                    "processor": "$sensors.mic_sound_limiter"
+                }
+            },
+            {
+                "add": {
+                    "processor": "$sensors.mic_sound_gain_remapper"
+                }
+            },
+            {
+                "add": {
+                    "processor": "$sensors.mic_sound_final_limiter"
+                }
+            }
+        ]
+    }
+}

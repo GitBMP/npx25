@@ -1,0 +1,47 @@
+{
+    "buttons": {
+        "class": "DataContainer",
+        "icon": "icon-electric-switch"
+    },
+
+    "buttons.btn0": {
+        "class": "Button",
+        "values": { "pin": 6 },
+        "calls": [ { "set_callback": { "fn_callback": "$color2.inc" } } ]
+    },
+    "buttons.btn1": {
+        "class": "Button",
+        "values": { "pin": 8 },
+        "calls": [ { "set_callback": { "fn_callback": "$color1.inc" } } ]
+    },
+    "buttons.btn2": {
+        "class": "Button",
+        "values": { "pin": 10 },
+        "calls": [ { "set_callback": { "fn_callback": "$brightness_value.inc" } } ]
+    },
+    "buttons.btn3": {
+        "class": "Button",
+        "values": { "pin": 0 },
+        "calls": [ { "set_callback": { "fn_callback": "$mode.next" } } ]
+    },
+    "buttons.btn4": {
+        "class": "Button",
+        "values": { "pin": 5 },
+        "calls": [ { "set_callback": { "fn_callback": "$color2.dec" } } ]
+    },
+    "buttons.btn5": {
+        "class": "Button",
+        "values": { "pin": 7 },
+        "calls": [ { "set_callback": { "fn_callback": "$color1.dec" } } ]
+    },
+    "buttons.btn6": {
+        "class": "Button",
+        "values": { "pin": 20 },
+        "calls": [ { "set_callback": { "fn_callback": "$brightness_value.dec" } } ]
+    },
+    "buttons.btn7": {
+        "class": "Button",
+        "values": { "pin": 21 },
+        "calls": [ { "set_callback": { "fn_callback": "$mode.prev" } } ]
+    }
+}

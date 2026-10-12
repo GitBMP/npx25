@@ -1,0 +1,35 @@
+{
+    "poti_raw": {
+        "class": "AnalogSensor",
+        "values": { "pin": 2 },
+        "auto_start": false
+    },
+
+    "map_to": {
+        "class": "Value",
+        "values": { "value": 10, "type": "float", "min": 0, "max": 100, "step": 1, "widget": "number" },
+        "auto_start": false
+    },
+
+    "poti": {
+        "class": "Pipeline",
+        "values": { "source": "$poti_raw" },
+        "calls": [
+            { "add": { "processor": "$poti_remapper" } },
+            { "add": { "processor": "$poti_limiter" } }
+        ],
+        "auto_start": false
+    },
+
+    "poti_remapper": {
+        "class": "Remapper",
+        "values": { "from_min": 0, "from_max": 1, "to_min": 0, "to_max": "lambda: $map_to.value" },
+        "auto_start": false
+    },
+
+    "poti_limiter": {
+        "class": "Limiter",
+        "values": { "min_val": 0, "max_val": "lambda: $map_to.value" },
+        "auto_start": false
+    }
+}

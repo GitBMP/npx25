@@ -1,0 +1,20 @@
+# Secrets (copy config/_wifi.example.json to config/wifi.json and fill in)
+**/wifi.json
+
+# Local only
+_backups/
+_notes/
+.claude/settings.local.json
+.vscode/
+
+# Syncthing
+.stfolder/
+.stversions/
+*.sync-conflict-*
+
+# Windows metadata (WSL)
+*Zone.Identifier
+
+# Python
+__pycache__/
+*.pyc

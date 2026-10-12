@@ -1,0 +1,417 @@
+{
+    "leds": {
+        "class": "DataContainer",
+        "icon": "icon-led-strip"
+    },
+    "patterns": {
+        "class": "DataContainer",
+        "icon": "icon-palette"
+    },
+    "leds.strip1": {
+        "class": "NPX",
+        "values": {
+            "pin": 9,
+            "num_leds": 117,
+            "bpp": 3
+        },
+        "calls": [
+            {
+                "add_zone": {
+                    "size": 8,
+                    "inverted": true
+                }
+            },
+            {
+                "add_zone": {
+                    "size": -1
+                }
+            }
+        ]
+    },
+    "leds.strip2": {
+        "class": "NPX",
+        "values": {
+            "pin": 2,
+            "num_leds": 117,
+            "bpp": 3
+        },
+        "calls": [
+            {
+                "add_zone": {
+                    "size": 8,
+                    "inverted": false
+                }
+            },
+            {
+                "add_zone": {
+                    "size": -1
+                }
+            }
+        ]
+    },
+    "patterns.black0": {
+        "class": "Pattern",
+        "values": {}
+    },
+    "patterns.black1": {
+        "class": "Pattern",
+        "values": {}
+    },
+    "patterns.black2": {
+        "class": "Pattern",
+        "values": {}
+    },
+    "patterns.black3": {
+        "class": "Pattern",
+        "values": {}
+    },
+    "patterns.static0": {
+        "class": "Static",
+        "values": {
+            "color": "lambda: $color1.value",
+            "brightness": "$brightness.value"
+        }
+    },
+    "patterns.static1": {
+        "class": "Static",
+        "values": {
+            "color": "lambda: $color1.value",
+            "brightness": "$brightness.value"
+        }
+    },
+    "patterns.static2": {
+        "class": "Static",
+        "values": {
+            "color": "lambda: $color1.value",
+            "brightness": "$brightness.value"
+        }
+    },
+    "patterns.static3": {
+        "class": "Static",
+        "values": {
+            "color": "lambda: $color1.value",
+            "brightness": "$brightness.value"
+        }
+    },
+    "patterns.fade0": {
+        "class": "ColorFade",
+        "values": {
+            "color1": "lambda: $color1.value",
+            "color2": "lambda: $color2.value",
+            "brightness": "$brightness.value"
+        }
+    },
+    "patterns.fade1": {
+        "class": "ColorFade",
+        "values": {
+            "color1": "lambda: $color1.value",
+            "color2": "lambda: $color2.value",
+            "brightness": "$brightness.value"
+        }
+    },
+    "patterns.fade2": {
+        "class": "ColorFade",
+        "values": {
+            "color1": "lambda: $color1.value",
+            "color2": "lambda: $color2.value",
+            "brightness": "$brightness.value"
+        }
+    },
+    "patterns.fade3": {
+        "class": "ColorFade",
+        "values": {
+            "color1": "lambda: $color1.value",
+            "color2": "lambda: $color2.value",
+            "brightness": "$brightness.value"
+        }
+    },
+    "patterns.rainbow0": {
+        "class": "Rainbow",
+        "values": {
+            "brightness": "$sensors.bright.value",
+            "speed": 5.0
+        }
+    },
+    "patterns.rainbow1": {
+        "class": "Rainbow",
+        "values": {
+            "brightness": "$sensors.bright.value",
+            "speed": 5.0
+        }
+    },
+    "patterns.rainbow2": {
+        "class": "Rainbow",
+        "values": {
+            "brightness": "$sensors.bright.value",
+            "speed": 5.0
+        }
+    },
+    "patterns.rainbow3": {
+        "class": "Rainbow",
+        "values": {
+            "brightness": "$sensors.bright.value",
+            "speed": 5.0
+        }
+    },
+    "patterns.soundbar0": {
+        "class": "SoundBar",
+        "values": {
+            "level": "$sensors.mic_sound.value",
+            "color1": "lambda: $color1.value",
+            "color2": "lambda: $color2.value",
+            "brightness": "$brightness.value",
+            "inverted": true
+        }
+    },
+    "patterns.soundbar1": {
+        "class": "SoundBar",
+        "values": {
+            "level": "$sensors.mic_sound.value",
+            "color1": "lambda: $color1.value",
+            "color2": "lambda: $color2.value",
+            "brightness": "$brightness.value",
+            "inverted": true
+        }
+    },
+    "patterns.soundbar2": {
+        "class": "SoundBar",
+        "values": {
+            "level": "$sensors.mic_sound.value",
+            "color1": "lambda: $color1.value",
+            "color2": "lambda: $color2.value",
+            "brightness": "$brightness.value",
+            "inverted": true
+        }
+    },
+    "patterns.soundbar3": {
+        "class": "SoundBar",
+        "values": {
+            "level": "$sensors.mic_sound.value",
+            "color1": "lambda: $color1.value",
+            "color2": "lambda: $color2.value",
+            "brightness": "$brightness.value",
+            "inverted": true
+        }
+    },
+    "patterns.soundbar_mirror0": {
+        "class": "SoundBarMirror",
+        "values": {
+            "level": "$sensors.mic_sound.value",
+            "color1": "lambda: $color1.value",
+            "color2": "lambda: $color2.value",
+            "brightness": "$brightness.value",
+            "inverted": true
+        }
+    },
+    "patterns.soundbar_mirror1": {
+        "class": "SoundBarMirror",
+        "values": {
+            "level": "$sensors.mic_sound.value",
+            "color1": "lambda: $color1.value",
+            "color2": "lambda: $color2.value",
+            "brightness": "$brightness.value",
+            "inverted": true
+        }
+    },
+    "patterns.soundbar_mirror2": {
+        "class": "SoundBarMirror",
+        "values": {
+            "level": "$sensors.mic_sound.value",
+            "color1": "lambda: $color1.value",
+            "color2": "lambda: $color2.value",
+            "brightness": "$brightness.value",
+            "inverted": true
+        }
+    },
+    "patterns.soundbar_mirror3": {
+        "class": "SoundBarMirror",
+        "values": {
+            "level": "$sensors.mic_sound.value",
+            "color1": "lambda: $color1.value",
+            "color2": "lambda: $color2.value",
+            "brightness": "$brightness.value",
+            "inverted": true
+        }
+    },
+    "patterns.soundslider0": {
+        "class": "SoundSlider",
+        "values": {
+            "level": "$sensors.mic_sound.value",
+            "color1": "lambda: $color1.value",
+            "color2": "lambda: $color2.value",
+            "brightness": "$brightness.value",
+            "inverted": true,
+            "slider_size": 3
+        }
+    },
+    "patterns.soundslider1": {
+        "class": "SoundSlider",
+        "values": {
+            "level": "$sensors.mic_sound.value",
+            "color1": "lambda: $color1.value",
+            "color2": "lambda: $color2.value",
+            "brightness": "$brightness.value",
+            "inverted": true,
+            "slider_size": 3
+        }
+    },
+    "patterns.soundslider2": {
+        "class": "SoundSlider",
+        "values": {
+            "level": "$sensors.mic_sound.value",
+            "color1": "lambda: $color1.value",
+            "color2": "lambda: $color2.value",
+            "brightness": "$brightness.value",
+            "inverted": true,
+            "slider_size": 3
+        }
+    },
+    "patterns.soundslider3": {
+        "class": "SoundSlider",
+        "values": {
+            "level": "$sensors.mic_sound.value",
+            "color1": "lambda: $color1.value",
+            "color2": "lambda: $color2.value",
+            "brightness": "$brightness.value",
+            "inverted": true,
+            "slider_size": 3
+        }
+    },
+    "patterns.running_light0": {
+        "class": "RunningLight",
+        "values": {
+            "color": "lambda: $color1.value",
+            "background_color": "lambda: $color2.value",
+            "dot_size": 2,
+            "num_dots": 2,
+            "brightness": "$brightness.value",
+            "speed": "$sensors.poti_speed.value"
+        }
+    },
+    "patterns.running_light1": {
+        "class": "RunningLight",
+        "values": {
+            "color": "lambda: $color1.value",
+            "background_color": "lambda: $color2.value",
+            "dot_size": 3,
+            "num_dots": 4,
+            "brightness": "$brightness.value",
+            "speed": "$sensors.poti_speed.value"
+        }
+    },
+    "patterns.running_light2": {
+        "class": "RunningLight",
+        "values": {
+            "color": "lambda: $color1.value",
+            "background_color": "lambda: $color2.value",
+            "dot_size": 2,
+            "num_dots": 2,
+            "brightness": "$brightness.value",
+            "speed": "$sensors.poti_speed.value"
+        }
+    },
+    "patterns.running_light3": {
+        "class": "RunningLight",
+        "values": {
+            "color": "lambda: $color1.value",
+            "background_color": "lambda: $color2.value",
+            "dot_size": 3,
+            "num_dots": 4,
+            "brightness": "$brightness.value",
+            "speed": "$sensors.poti_speed.value"
+        }
+    },
+    "mode": {
+        "class": "StateMachine",
+        "calls": [
+            {
+                "add_state": {
+                    "name": "black",
+                    "on_enter": [
+                        "lambda: $leds.strip1.set_pattern($patterns.black0, zone=0)",
+                        "lambda: $leds.strip1.set_pattern($patterns.black1, zone=1)",
+                        "lambda: $leds.strip2.set_pattern($patterns.black2, zone=0)",
+                        "lambda: $leds.strip2.set_pattern($patterns.black3, zone=1)"
+                    ]
+                }
+            },
+            {
+                "add_state": {
+                    "name": "static",
+                    "on_enter": [
+                        "lambda: $leds.strip1.set_pattern($patterns.static0, zone=0)",
+                        "lambda: $leds.strip1.set_pattern($patterns.static1, zone=1)",
+                        "lambda: $leds.strip2.set_pattern($patterns.static2, zone=0)",
+                        "lambda: $leds.strip2.set_pattern($patterns.static3, zone=1)"
+                    ]
+                }
+            },
+            {
+                "add_state": {
+                    "name": "fade",
+                    "on_enter": [
+                        "lambda: $leds.strip1.set_pattern($patterns.fade0, zone=0)",
+                        "lambda: $leds.strip1.set_pattern($patterns.fade1, zone=1)",
+                        "lambda: $leds.strip2.set_pattern($patterns.fade2, zone=0)",
+                        "lambda: $leds.strip2.set_pattern($patterns.fade3, zone=1)"
+                    ]
+                }
+            },
+            {
+                "add_state": {
+                    "name": "rainbow",
+                    "on_enter": [
+                        "lambda: $leds.strip1.set_pattern($patterns.rainbow0, zone=0)",
+                        "lambda: $leds.strip1.set_pattern($patterns.rainbow1, zone=1)",
+                        "lambda: $leds.strip2.set_pattern($patterns.rainbow2, zone=0)",
+                        "lambda: $leds.strip2.set_pattern($patterns.rainbow3, zone=1)"
+                    ]
+                }
+            },
+            {
+                "add_state": {
+                    "name": "soundbar",
+                    "on_enter": [
+                        "lambda: $leds.strip1.set_pattern($patterns.soundbar0, zone=0)",
+                        "lambda: $leds.strip1.set_pattern($patterns.soundbar1, zone=1)",
+                        "lambda: $leds.strip2.set_pattern($patterns.soundbar2, zone=0)",
+                        "lambda: $leds.strip2.set_pattern($patterns.soundbar3, zone=1)"
+                    ]
+                }
+            },
+            {
+                "add_state": {
+                    "name": "soundbar_mirror",
+                    "on_enter": [
+                        "lambda: $leds.strip1.set_pattern($patterns.soundbar_mirror0, zone=0)",
+                        "lambda: $leds.strip1.set_pattern($patterns.soundbar_mirror1, zone=1)",
+                        "lambda: $leds.strip2.set_pattern($patterns.soundbar_mirror2, zone=0)",
+                        "lambda: $leds.strip2.set_pattern($patterns.soundbar_mirror3, zone=1)"
+                    ]
+                }
+            },
+            {
+                "add_state": {
+                    "name": "soundslider",
+                    "on_enter": [
+                        "lambda: $leds.strip1.set_pattern($patterns.soundslider0, zone=0)",
+                        "lambda: $leds.strip1.set_pattern($patterns.soundslider1, zone=1)",
+                        "lambda: $leds.strip2.set_pattern($patterns.soundslider2, zone=0)",
+                        "lambda: $leds.strip2.set_pattern($patterns.soundslider3, zone=1)"
+                    ]
+                }
+            },
+            {
+                "add_state": {
+                    "name": "running_light",
+                    "on_enter": [
+                        "lambda: $leds.strip1.set_pattern($patterns.running_light0, zone=0)",
+                        "lambda: $leds.strip1.set_pattern($patterns.running_light1, zone=1)",
+                        "lambda: $leds.strip2.set_pattern($patterns.running_light2, zone=0)",
+                        "lambda: $leds.strip2.set_pattern($patterns.running_light3, zone=1)"
+                    ]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header">
+            <svg class="burger-menu" viewBox="0 0 24 24">
+                <use href="#icon-menu"></use>
+            </svg>
+            <span class="logo">Home Assistant</span>
+        </div>
+
+        <!-- Favourites Navigation (dynamically loaded) -->
+        <nav class="sidebar-nav" id="sidebar-nav-favourites">
+            <!-- Will be populated by JavaScript from GET /api/sidebar -->
+        </nav>
+
+        <!-- Container Navigation (dynamically loaded) -->
+        <nav class="sidebar-nav" id="sidebar-nav-container">
+            <!-- Will be populated by JavaScript from GET /api/sidebar -->
+        </nav>
+
+        <!-- Bottom Navigation (dynamically loaded) -->
+        <nav class="sidebar-nav-bottom" id="sidebar-nav-bottom">
+            <!-- Will be populated by JavaScript from GET /api/sidebar -->
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <h1 class="page-title" id="page-title">Overview</h1>
+            <div class="top-bar-actions">
+                <button class="icon-btn" title="Sync" id="btn-sync">
+                    <svg viewBox="0 0 24 24">
+                        <use href="#icon-sync-off"></use>
+                    </svg>
+                </button>
+                <button class="icon-btn" title="Label" id="btn-label">
+                    <svg viewBox="0 0 24 24">
+                        <use href="#icon-label-off"></use>
+                    </svg>
+                </button>
+                <button class="icon-btn" title="Info" id="btn-info">
+                    <svg viewBox="0 0 24 24">
+                        <use href="#icon-information-off"></use>
+                    </svg>
+                </button>
+                <button class="icon-btn" title="Edit" id="btn-edit">
+                    <svg viewBox="0 0 24 24">
+                        <use href="#icon-pencil-off"></use>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Cards Container (dynamically populated) -->
+        <div class="cards-container" id="cards-container">
+            <!-- Cards will be populated by JavaScript from POST /api/cards -->
+            <!-- Each card will be rendered based on the card data structure -->
+        </div>
+    </main>
+
+    <!-- Color Picker Modal -->
+    <div class="modal" id="color-picker-modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Pick Color</h2>
+                <button class="modal-close" id="close-color-picker">
+                    <svg viewBox="0 0 24 24">
+                        <use href="#icon-close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="color-picker-container">
+                    <label for="color-input">Choose Color:</label>
+                    <input type="color" id="color-input" value="#ff9800">
+                    <div class="color-preview-large" id="color-preview-large" style="background-color: #ff9800;"></div>
+                </div>
+                <div class="preset-colors">
+                    <span class="preset-label">Presets:</span>
+                    <button class="preset-color" data-color="#ff0000" style="background-color: #ff0000;" title="Red"></button>
+                    <button class="preset-color" data-color="#ff9800" style="background-color: #ff9800;" title="Orange"></button>
+                    <button class="preset-color" data-color="#ffeb3b" style="background-color: #ffeb3b;" title="Yellow"></button>
+                    <button class="preset-color" data-color="#4caf50" style="background-color: #4caf50;" title="Green"></button>
+                    <button class="preset-color" data-color="#2196f3" style="background-color: #2196f3;" title="Blue"></button>
+                    <button class="preset-color" data-color="#9c27b0" style="background-color: #9c27b0;" title="Purple"></button>
+                    <button class="preset-color" data-color="#ffffff" style="background-color: #ffffff;" title="White"></button>
+                    <button class="preset-color" data-color="#ffc107" style="background-color: #ffc107;" title="Warm White"></button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="cancel-color">Cancel</button>
+                <button class="btn btn-primary" id="apply-color">Apply</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/loader.js"></script>
+    <!-- <script src="/topbar.js"></script>
+    <script src="/utils.js"></script>
+    <script src="/api.js"></script>
+    <script src="/sidebar.js"></script>
+    <script src="/cards.js"></script>
+    <script src="/cardItem.js"></script>
+    <script src="/update.js"></script>
+    <script src="/index.js"></script> -->
+</body>
+</html>

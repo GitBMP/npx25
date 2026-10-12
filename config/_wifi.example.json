@@ -1,0 +1,15 @@
+{
+    "settings.wifi_ap": {
+        "class": "WiFiAP",
+        "values": { "ssid": "ESP32-AP", "passwd": "12345678", "active": false }
+    },
+
+    "settings.wifi_sta": {
+        "class": "WiFiSTA",
+        "auto_start": false,
+        "values": { "ssid": "YOUR_WIFI_SSID", "passwd": "YOUR_WIFI_PASSWORD", "active": true },
+        "calls": [
+            { "set_callback": { "fn_callback": "lambda v: $settings.wifi_ap.set_active(v)" } }
+        ]
+    }
+}

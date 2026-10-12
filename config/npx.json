@@ -1,0 +1,60 @@
+{
+    "patterns": {
+        "class": "DataContainer",
+        "icon": "icon-palette"
+    },
+
+    "npx": {
+        "class": "NPX",
+        "values": { "pin": 0, "num_leds": 10, "bpp": 4 }
+    },
+
+    "patterns.off": {
+        "class": "Static",
+        "values": { "color": [0, 0, 0], "brightness": 1.0 },
+        "auto_start": false
+    },
+
+    "patterns.red": {
+        "class": "Static",
+        "values": { "color": [1, 0, 0], "brightness": 0.5 },
+        "auto_start": false
+    },
+
+    "patterns.rainbow": {
+        "class": "Rainbow",
+        "values": { "brightness": 0.3, "speed": 1.0 },
+        "auto_start": false
+    },
+
+    "patterns.rainbow_static": {
+        "class": "RainbowStatic",
+        "values": { "brightness": 0.3 },
+        "auto_start": false
+    },
+
+    "patterns.fade": {
+        "class": "ColorFade",
+        "values": { "color1": [1, 0, 0], "color2": [0, 0, 1], "brightness": 0.5 },
+        "auto_start": false
+    },
+
+    "patterns.runner": {
+        "class": "RunningLight",
+        "values": { "color": [1, 1, 1], "background_color": [0, 0, 0], "dot_size": 2, "num_dots": 3, "brightness": 0.5, "speed": 2.0 },
+        "auto_start": false
+    },
+
+    "mode": {
+        "class": "StateMachine",
+        "calls": [
+            { "add_state": { "name": "off",            "on_enter": "lambda: $npx.set_pattern($patterns.off)" } },
+            { "add_state": { "name": "red",            "on_enter": "lambda: $npx.set_pattern($patterns.red)" } },
+            { "add_state": { "name": "rainbow",        "on_enter": "lambda: $npx.set_pattern($patterns.rainbow)" } },
+            { "add_state": { "name": "rainbow_static", "on_enter": "lambda: $npx.set_pattern($patterns.rainbow_static)" } },
+            { "add_state": { "name": "fade",           "on_enter": "lambda: $npx.set_pattern($patterns.fade)" } },
+            { "add_state": { "name": "runner",         "on_enter": "lambda: $npx.set_pattern($patterns.runner)" } }
+        ],
+        "auto_start": false
+    }
+}

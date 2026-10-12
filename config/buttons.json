@@ -1,0 +1,62 @@
+{
+    "buttons": {
+        "class": "DataContainer",
+        "icon": "icon-electric-switch"
+    },
+
+    "buttons.btn0": {
+        "class": "Button",
+        "values": { "pin": 1 },
+        "calls": [
+            { "set_callback": { "fn_callback": "lambda: print('Button 0 pressed')" } }
+        ],
+        "meta": {
+            "pin": {
+                "write": false,
+                "widget": "text"
+            }
+        }
+    },
+
+    "buttons.btn1": {
+        "class": "Button",
+        "values": { "pin": 4 },
+        "calls": [
+            { "set_callback": { "fn_callback": "lambda: print('Button 1 pressed')" } }
+        ]
+    },
+
+    "buttons.btn2": {
+        "class": "Button",
+        "values": { "pin": 5 },
+        "calls": [
+            { "set_callback": { "fn_callback": "lambda: print('Button 2 pressed')" } },
+            { "set_callback": { "fn_callback": "$mode.next" } }
+        ]
+    },
+
+    "buttons.btn3": {
+        "class": "Button",
+        "values": { "pin": 3 },
+        "calls": [
+            { "set_callback": { "fn_callback": "lambda: print('Button 3 pressed')" } }
+        ]
+    },
+
+    "buttons.btn4": {
+        "class": "Button",
+        "values": { "pin": 6 },
+        "calls": [
+            { "set_callback": { "fn_callback": "lambda: print('Button 4 pressed')" } }
+        ]
+    },
+
+    "buttons.btn5": {
+        "class": "Button",
+        "values": { "pin": 7 },
+        "calls": [
+            { "set_callback": { "fn_callback": "lambda: print('Button 5 pressed')" } },
+            { "set_callback": { "fn_callback": "$mode.prev" } }
+        ]
+    }
+}

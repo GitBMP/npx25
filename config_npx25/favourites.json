@@ -1,0 +1,26 @@
+{
+    "favourites.lights": {
+        "name": "Lights",
+        "icon": "icon-lightbulb",
+        "class": "Favourite",
+        "values": {
+            "cards": [
+                {
+                    "path": "mode"
+                },
+                {
+                    "path": "brightness_value"
+                },
+                {
+                    "path": "color1"
+                },
+                {
+                    "path": "color2"
+                },
+                {
+                    "path": "sensors.mic_sound"
+                }
+            ]
+        }
+    }
+}

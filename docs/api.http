@@ -1,0 +1,55 @@
+@baseUrl = http://192.168.178.134
+
+### Get Sidebar
+GET {{baseUrl}}/api/sidebar
+Accept: application/json
+
+### Get Cards from root DC
+POST {{baseUrl}}/api/cards
+Content-Type: application/json
+
+{
+"path": ""
+}
+
+### Get Cards from poti_raw container
+POST {{baseUrl}}/api/cards
+Content-Type: application/json
+
+{
+"path": ""
+}
+
+### Get Cards from poti_raw container
+POST {{baseUrl}}/api/cards
+Content-Type: application/json
+
+{
+"path": "favourites.lights"
+}
+
+### Get multiple values
+POST {{baseUrl}}/api/get
+Content-Type: application/json
+
+[
+"poti.value",
+"poti_raw.value"
+]
+
+### Set single value
+POST {{baseUrl}}/api/set
+Content-Type: application/json
+
+{
+"poti.value": 0.5
+}
+
+### Set multiple values
+POST {{baseUrl}}/api/set
+Content-Type: application/json
+
+{
+"poti.value": 0.7,
+"poti_raw.value": 0.3
+}

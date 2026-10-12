@@ -1,0 +1,14 @@
+{
+    "favourites.lights": {
+        "name": "Lights",
+        "icon": "icon-lightbulb",
+        "class": "Favourite",
+        "values": {
+            "cards": [
+                {"path": "npx", "attrs": ["pin", "---", "num_leds"]}, 
+                {"path": "buttons.btn2", "attrs": ["trigger_callbacks"]},
+                {"path": "state_machine"}
+            ]
+        }
+    }
+}
