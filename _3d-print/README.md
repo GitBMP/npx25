@@ -2,13 +2,13 @@
 
 # NPX25 – 3D-printed case
 
-![3D-printed case](../docs/images/3d-print.jpg)
+![3D-printed case](../_docs/images/3d-print.jpg)
 
 `npx25.FCStd` holds the complete case: bottom shell, top and button caps, all in one file, made with FreeCAD 1.0. The parts are a press fit, so there are no screws and no threads.
 
 <table>
   <tr>
-    <td><img src="../docs/images/freecad_model.png" alt="FreeCAD model of the top" width="520"></td>
+    <td><img src="../_docs/images/freecad_model.png" alt="FreeCAD model of the top" width="520"></td>
     <td>
       <b>Bodies in the model</b><br><br>
       <code>Bottom</code> – bottom shell<br>

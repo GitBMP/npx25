@@ -2,7 +2,7 @@
     "poti_raw": {
         "class": "AnalogSensor",
         "values": { "pin": 2 },
-        "auto_start": false
+        "meta": { "pin": { "write": false, "widget": "text" } }
     },
 
     "map_to": {
