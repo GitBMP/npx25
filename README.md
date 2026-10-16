@@ -351,8 +351,8 @@ Files and folders starting with `_` are not uploaded to the device.
 ## Known limitations
 
 - **Persistence**: changes made in the dashboard are not yet written back to the config files
-- **RAM**: `config/` runs reliably. The full `config_npx25/` with two strips, eight modes and a pattern instance per strip and zone does not fit reliably on the ESP32-C3
-- **Patterns per zone**: change detection lives in the pattern instance, so every pattern exists four times. That is most of the RAM problem
+- **RAM**: `config/` runs reliably. The full `config_npx25/` with two strips, eight modes and a pattern instance per strip and zone does crash during boot on the ESP32-C3
+- **Patterns per zone**: change detection lives in the pattern instance, so every pattern exists four times. That is can be one RAM improvement.
 
 <br>
 
