@@ -18,3 +18,10 @@ _notes/
 # Python
 __pycache__/
 *.pyc
+
+# FreeCAD / 3D print output
+*.FCBak
+*.FCStd1
+*.stl
+*.3mf
+*.gcode

@@ -7,7 +7,7 @@ class AnalogSensor(Component):
         'pin': {'type': int, 'label': 'GPIO Pin', 'icon': 'icon-connection', 'init': True, 'read': True, 'write': True, 'min': 0, 'max': 21, 'widget': 'number'},
         'resolution': {'type': int, 'label': 'Resolution', 'icon': 'icon-counter', 'init': True, 'read': True, 'default': 4096, 'widget': 'number'},
         'inverted': {'type': bool, 'label': 'Inverted', 'icon': 'icon-sync', 'init': True, 'read': True, 'write': True, 'default': False, 'widget': 'toggle'},
-        'raw_value': {'type': int, 'label': 'Raw Value', 'icon': 'icon-pound-box', 'read': True, 'widget': 'text', 'min': 0, 'max': 4095},
+        'raw_value': {'type': int, 'label': 'Raw Value', 'icon': 'icon-pound-box', 'read': True, 'widget': 'text', 'min': 0, 'max': 4095, 'update': True},
         'value': {'type': float, 'label': 'Value', 'icon': 'icon-counter', 'read': True, 'widget': 'text', 'min': 0.0, 'max': 1.0, 'update': True},
     }
 
